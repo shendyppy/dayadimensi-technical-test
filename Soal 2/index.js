@@ -1,3 +1,5 @@
+/* Technical Test 2 */
+
 function sameClothes(clothes) {
 	let isSame = false;
 
