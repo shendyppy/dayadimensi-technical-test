@@ -4,6 +4,7 @@ import {
 	SET_COMPANY_DETAIL,
 	SET_LOADING_FETCH,
 	SET_ERROR,
+	SET_LOADING_FETCH_DETAIL,
 } from "./actionType";
 const baseURL = "http://localhost:3001/companies";
 
@@ -24,6 +25,13 @@ export function setCompanyDetail(payload) {
 export function setLoadingFetch(payload) {
 	return {
 		type: SET_LOADING_FETCH,
+		payload,
+	};
+}
+
+export function setLoadingFetchDetail(payload) {
+	return {
+		type: SET_LOADING_FETCH_DETAIL,
 		payload,
 	};
 }
@@ -55,14 +63,14 @@ export function fetchCompanyDetail(payload) {
 	return async function (dispatch) {
 		try {
 			dispatch(setError(null));
-			dispatch(setLoadingFetch(true));
+			dispatch(setLoadingFetchDetail(true));
 			const response = await axios.get(`${baseURL}/${payload}`);
 
 			dispatch(setCompanyDetail(response.data));
 		} catch (error) {
 			dispatch(setError(error));
 		} finally {
-			dispatch(setLoadingFetch(false));
+			dispatch(setLoadingFetchDetail(false));
 		}
 	};
 }
