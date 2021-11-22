@@ -14,4 +14,7 @@ Butuh install json-server, dikarenakan penggunaan database menggunakan json-serv
 
 Setelah menginstall json-server dengan cara ```npm i json-server```, pindah default path nya ke ```src/server``` dan run server dengan cara ```json-server --watch db.json --port=3001```.
 
-# Terima kasih banyak sebelumnya, semoga memenuhi ekspektasi
+
+
+
+## Terima kasih banyak sebelumnya, semoga memenuhi ekspektasi
