@@ -1,24 +1,34 @@
-function sameClothes(clothes) {
-	let isSame = false;
+/* Technical Test 2 */
 
-	for (let i = 0; i < clothes.length; i++) {
-		// let temp = []
-		if (clothes[i] === clothes[i + 1] || clothes[i] === clothes[i + 2]) {
-			isSame = true;
-		} else {
-			isSame = false;
+function sameClothes(data) {
+	let temp = [];
+	for (let i = 0; i < data.length; i++) {
+		let subTemp = "";
+		for (let j = 0; j < data[i].length; j++) {
+			subTemp += data[i][j];
 		}
+		temp.push(subTemp);
 	}
 
+	let isSame = true;
+
+	for (let i = 0; i < temp.length; i++) {
+		for (let j = 0; j < i; j++) {
+			if (temp[i] === temp[j]) {
+				isSame = false;
+			}
+		}
+	}
 	return isSame;
 }
 
 const clothes = [
-	["GoJakarta", "Elixir"],
+	["JakartaJS"],
 	["AWSome Day", "Elixir"],
 	["GoJakarta", "Elixir"],
 ];
 
-console.log(clothes[0] === clothes[2]);
+const clothes2 = [["JakartaJS", "Elixir"], ["Elixir"], ["JakartaJS", "Elixir"]];
 
 console.log(sameClothes(clothes));
+console.log(sameClothes(clothes2));
