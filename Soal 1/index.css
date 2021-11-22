@@ -8,7 +8,14 @@ body {
 	width: 80vw;
 }
 
-.div1 {
+div {
+	border-style: solid;
+	border-color: black;
+	cursor: pointer;
+	text-align: center;
+}
+
+#DIV1 {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -18,30 +25,28 @@ body {
 	background-color: whitesmoke;
 	height: 100%;
 	width: 100%;
-	border-width: 10px;
-	border-color: black;
+	margin-top: 10%;
 }
 
-.div2 {
+#DIV2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-color: orange;
-	height: 90%;
+	height: 80%;
 	width: 90%;
-	border-width: 10px;
-	border-color: black;
+	margin-top: 1%;
+	margin-bottom: 5%;
 }
 
-.div3 {
+#DIV3 {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-color: green;
-	height: 80%;
-	width: 80%;
-	border-width: 10px;
-	border-color: black;
+	height: 60%;
+	width: 90%;
+	margin-bottom: 5%;
 }
