@@ -2,25 +2,24 @@
 
 function sameClothes(data) {
 	let temp = [];
-
 	for (let i = 0; i < data.length; i++) {
-		let subData = data[i];
-		for (let j = 0; j < subData.length; j++) {
-			temp.push(subData[j]);
+		let subTemp = "";
+		for (let j = 0; j < data[i].length; j++) {
+			subTemp += data[i][j];
+		}
+		temp.push(subTemp);
+	}
+
+	let isSame = true;
+
+	for (let i = 0; i < temp.length; i++) {
+		for (let j = 0; j < i; j++) {
+			if (temp[i] === temp[j]) {
+				isSame = false;
+			}
 		}
 	}
-
-	const unique = (value, index, self) => {
-		return self.indexOf(value) === index;
-	};
-
-	const result = temp.filter(unique);
-
-	if (result.length < 3) {
-		return false;
-	} else {
-		return true;
-	}
+	return isSame;
 }
 
 const clothes = [
