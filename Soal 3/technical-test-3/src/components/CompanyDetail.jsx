@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router";
 import { fetchCompanyDetail } from "../stores/company/action";
+import Error from "./Error";
+import Loading from "./Loading";
 
 function CompanyDetail() {
 	const history = useHistory();
@@ -21,30 +23,11 @@ function CompanyDetail() {
 	}, [dispatch, id]);
 
 	if (error) {
-		return (
-			<>
-				<h1>Something Went Wrong!</h1>
-			</>
-		);
+		return <Error />;
 	}
 
 	if (loadingFetchDetail) {
-		return (
-			<>
-				<div>
-					<div className="container mx-auto text-center mt-10 mb-10">
-						<lottie-player
-							src="https://assets10.lottiefiles.com/packages/lf20_WXXDFD.json"
-							background="transparent"
-							speed="1"
-							style={{ width: "100%", height: "100%" }}
-							loop
-							autoplay
-						></lottie-player>
-					</div>
-				</div>
-			</>
-		);
+		return <Loading />;
 	}
 
 	return (

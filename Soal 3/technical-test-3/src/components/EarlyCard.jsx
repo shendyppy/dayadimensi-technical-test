@@ -17,7 +17,7 @@ function EarlyCard() {
 
 	return (
 		<>
-			<div>
+			<div onClick={handleToCompany}>
 				<div class="card shadow-xl image-full" style={{ height: "300px" }}>
 					<figure>
 						<img
@@ -27,12 +27,10 @@ function EarlyCard() {
 					</figure>
 				</div>
 				<div class="mx-auto mt-2">
-					<button class="btn btn-primary" onClick={handleToCompany}>
-						Company
-					</button>
+					<button class="btn btn-primary">Company</button>
 				</div>
 			</div>
-			<div>
+			<div onClick={handleToCommunity}>
 				<div class="card shadow-xl image-full" style={{ height: "300px" }}>
 					<figure>
 						<img
@@ -42,12 +40,10 @@ function EarlyCard() {
 					</figure>
 				</div>
 				<div class="mx-auto mt-2">
-					<button class="btn btn-primary" onClick={handleToCommunity}>
-						Community
-					</button>
+					<button class="btn btn-primary">Community</button>
 				</div>
 			</div>
-			<div>
+			<div onClick={handleToEducation}>
 				<div class="card shadow-xl image-full" style={{ height: "300px" }}>
 					<figure>
 						<img
@@ -57,9 +53,7 @@ function EarlyCard() {
 					</figure>
 				</div>
 				<div class="mx-auto mt-2">
-					<button class="btn btn-primary" onClick={handleToEducation}>
-						Education
-					</button>
+					<button class="btn btn-primary">Education</button>
 				</div>
 			</div>
 		</>

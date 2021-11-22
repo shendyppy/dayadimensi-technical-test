@@ -3,6 +3,8 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import Card from "../components/Card";
+import Error from "../components/Error";
+import Loading from "../components/Loading";
 import { fetchCommunity } from "../stores/community/action";
 
 function Community() {
@@ -17,30 +19,11 @@ function Community() {
 	}, [dispatch]);
 
 	if (error) {
-		return (
-			<>
-				<h1>Something Went Wrong!</h1>
-			</>
-		);
+		return <Error />;
 	}
 
 	if (loadingFetch) {
-		return (
-			<>
-				<div>
-					<div className="container mx-auto text-center mt-10 mb-10">
-						<lottie-player
-							src="https://assets10.lottiefiles.com/packages/lf20_WXXDFD.json"
-							background="transparent"
-							speed="1"
-							style={{ width: "100%", height: "100%" }}
-							loop
-							autoplay
-						></lottie-player>
-					</div>
-				</div>
-			</>
-		);
+		return <Loading />;
 	}
 
 	return (
