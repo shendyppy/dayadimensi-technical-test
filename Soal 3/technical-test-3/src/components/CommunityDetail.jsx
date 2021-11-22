@@ -51,14 +51,14 @@ function CommunityDetail() {
 	return (
 		<>
 			<div
-				class="card bordered mt-6 mr-20 ml-20 mb-20"
+				class="card bordered mt-6 mr-10 ml-10 mb-10 text-center"
 				style={{ borderWidth: 1, borderColor: "black" }}
 			>
 				<figure>
 					<img src={communityDetail.imgUrl} alt="No data" />
 				</figure>
 				<div class="card-body">
-					<h2 class="card-title text-3xl text-center">
+					<h2 class="card-title text-2xl text-center">
 						{communityDetail.title}
 					</h2>
 					<p class="card-title text-lg text-center italic">
@@ -67,7 +67,7 @@ function CommunityDetail() {
 					<div class="card-actions mx-auto">
 						<button
 							class="btn btn-outline"
-							style={{ backgroundColor: "#f15447", width: "200px" }}
+							style={{ backgroundColor: "#f15447" }}
 							onClick={handleGoBack}
 						>
 							Back
